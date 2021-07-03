@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <!-- Style -->
+    <style type="text/css">
+
+    </style>
+    <!-- Framwork -->
+    <script src="./../../node_modules/jquery/dist/jquery.js"></script>
+    <!-- jQuery Code  -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").hide();
+            });
+        });
+
+        /* shorthand variante of $(document).ready(function () { }); */
+        $(function () {
+            $('#BB').click(function (e) {
+                e.preventDefault();
+                console.log(e)
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h2>jQuery</h2>
+    <p>This is my first paragraph</p>
+    <p>This is my second paragraph</p>
+    <button>Hide</button>
+    <button id="BB">Hide - handy</button>
+</body>
+
+</html>

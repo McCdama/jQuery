@@ -1,3 +1,6 @@
+
+.gitignore
+.gitignore.txt
 # Dependencies
 .psci_modules
 bower_components
@@ -6,3 +9,9 @@ node_modules
 # Generated files
 .psci
 output
+#json file
+.package-lock
+package-lock
+package-lock.json
+.gitignore
+.gitignore
