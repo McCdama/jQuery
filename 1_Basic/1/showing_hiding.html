@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <!-- Style -->
+    <style type="text/css">
+        .mypanel {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            width: 150px;
+            height: 100px;
+            margin-top: 10px;
+            border: 1px solid gray;
+        }
+    </style>
+    <!-- Framwork -->
+    <script src="./../../node_modules/jquery/dist/jquery.js"></script>
+    <!-- jQuery Code  -->
+    <script>
+        /* The jQuery when() method executes callback functions having asynchronous events */
+        $(function () {
+            var task = $("div").toggle(3000);
+            $.when(task).done(function () {
+                if ($("#btn1").text().match("^Hide")) {
+                    $("#btn1").text("Show All");
+                } else {
+                    $('#btn1').text("Hide all");
+                }
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btn1">Hide all</button>
+
+    <div id="pnl1">Panel 1</div>
+    <div id="pnl2">Panel 2</div>
+    <div id="pnl3">Panel 3</div>
+    <div id="pnl4">Panel 4</div>
+</body>
+
+</html>

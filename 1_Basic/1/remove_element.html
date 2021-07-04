@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <!-- Style -->
+    <style type="text/css">
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            height: 80px;
+            margin: 3px;
+            border: 1px solid grey;
+        }
+    </style>
+    <!-- Framwork -->
+    <script src="./../../node_modules/jquery/dist/jquery.js"></script>
+    <!-- jQuery Code  -->
+    <script>
+        $(function () {
+            $('#btnf').click(function (e) {
+                e.preventDefault();
+                $('div:first').remove();
+            });
+            $('#btnl').click(function (e) {
+                e.preventDefault();
+                $('div:last').remove();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btnf"> Remove first </button>
+    <button id="btnl"> Remove last </button>
+    <br><br>
+    <div>Panel 1</div>
+    <div>Panel 2</div>
+    <div>Panel 3</div>
+    <div>Panel 4</div>
+    <div>Panel 5</div>
+    <div>Panel 6</div>
+</body>
+
+</html>

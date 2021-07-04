@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <!-- Style -->
+    <style type="text/css">
+        .mypanel {
+            position: relative;
+            width: 150px;
+            height: 100px;
+            margin-top: 10px;
+            background-color: rgb(179, 174, 174);
+        }
+    </style>
+    <!-- Framwork -->
+    <script src="./../../node_modules/jquery/dist/jquery.js"></script>
+    <!-- jQuery Code  -->
+    <script>
+        /* https://api.jquery.com/animate/#animate-properties-options */
+        $(function () {
+            $('#rightBtn').click(function (e) {
+                e.preventDefault();
+                $('.mypanel').animate({
+                    "left": "+=250px"
+                }, "slow");
+            });
+            $('#leftBtn').click(function (e) {
+                e.preventDefault();
+                $('.mypanel').animate({
+                    "left": "-=250px"
+                }, "slow");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="leftBtn">«««</button>
+    <button id="rightBtn">»»»</button>
+    <div class="mypanel"></div>
+</body>
+
+</html>

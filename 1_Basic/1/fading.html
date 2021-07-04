@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <!-- Style -->
+    <style type="text/css">
+        .mypanel {
+            width: 150px;
+            height: 100px;
+            margin-top: 10px;
+            background-color: rgb(179, 174, 174);
+        }
+    </style>
+    <!-- Framwork -->
+    <script src="./../../node_modules/jquery/dist/jquery.js"></script>
+    <!-- jQuery Code  -->
+    <script>
+        /* https://api.jquery.com/fadeIn/#fadeIn-options */
+        $(function () {
+            $('#fadeOutBtn').click(function (e) {
+                e.preventDefault();
+                $('.mypanel').fadeOut('slow');
+            });
+            $('#fadeInBtn').click(function (e) {
+                e.preventDefault();
+                $('.mypanel').fadeIn('slow');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="fadeOutBtn"> Fade Out </button>
+    <button id="fadeInBtn"> Fade in </button>
+    <div class="mypanel"></div>
+</body>
+
+</html>

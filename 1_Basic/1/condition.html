@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <!-- Style -->
+    <style type="text/css">
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            height: 80px;
+            margin: 3px;
+            border: 1px solid grey;
+        }
+    </style>
+    <!-- Framwork -->
+    <script src="./../../node_modules/jquery/dist/jquery.js"></script>
+    <!-- jQuery Code  -->
+    <script>
+        /* https://api.jquery.com/is/#is-selector */
+        $(function () {
+            $("div").on('click', function () {
+                if ($(this).is('#pnl3')) {
+                    console.log("Can not hide panel 3")
+                } else {
+                    $(this).hide(2000);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="pnl1">Panel 1</div>
+    <div id="pnl2">Panel 2</div>
+    <div id="pnl3">Panel 3</div>
+    <div id="pnl4">Panel 4</div>
+</body>
+
+</html>
