@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <!-- Style -->
+    <style type="text/css">
+        .mypanel {
+            width: 150px;
+            height: 100px;
+            background-color: maroon;
+        }
+    </style>
+    <!-- Framwork -->
+    <script src="./../../node_modules/jquery/dist/jquery.js"></script>
+    <!-- jQuery Code  -->
+    <script>
+        $(function () {
+            $('#btn').on('click', function () {
+                /* sliding motion */
+                $('.mypanel').slideToggle(2000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btn">Toogle</button>
+    <br><br>
+    <div class="mypanel"></div>
+
+</body>
+
+</html>

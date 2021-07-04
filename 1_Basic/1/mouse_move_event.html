@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <!-- Style -->
+    <style type="text/css">
+        .mypanel {
+            width: 250px;
+            height: 200px;
+            background-color: rgb(76, 131, 202);
+            margin: auto;
+        }
+
+        .printOnLog_1 {
+            background-color: rgb(173, 229, 151);
+            border: 1px;
+        }
+
+        .printOnLog_2 {
+            background-color: rgb(132, 201, 192);
+            border: 1px;
+        }
+    </style>
+    <!-- Framwork -->
+    <script src="./../../node_modules/jquery/dist/jquery.js"></script>
+    <!-- jQuery Code  -->
+    <script>
+        $(function () {
+            $(".mypanel").mousemove(function (e) {
+                var msgPage = `${'Page: '}${'x: '}${e.pageX}${' y: '}${e.pageY}`
+                var msgClient = `${'Client: '}${'x: '}${e.clientX}${' y: '}${e.clientY}`
+                $('#log').addClass('printOnLog_1').text(msgPage);
+                $('#log_2').addClass('printOnLog_2').text(msgClient);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="mypanel"></div>
+    <br>
+    <div id="log"></div>
+    <div id="log_2"></div>
+</body>
+
+</html>

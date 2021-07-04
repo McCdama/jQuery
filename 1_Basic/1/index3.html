@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <!-- Style -->
+    <style type="text/css">
+        .myCol {
+            background-color: rgb(132, 201, 192);
+            border: 1px;
+
+        }
+    </style>
+    <!-- Framwork -->
+    <script src="./../../node_modules/jquery/dist/jquery.js"></script>
+    <!-- jQuery Code  -->
+    <script type="text/javascript">
+        $(function () {
+            $('body').append("<div> Simple jQuery</div>");
+            $(':root').addClass('myCol');
+        });
+    </script>
+</head>
+
+<body>
+    <p>Paragaraph</p>
+    <div class="div">
+        <li></li>
+        <li></li>
+
+    </div>
+</body>
+
+</html>
