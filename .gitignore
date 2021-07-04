@@ -7,5 +7,5 @@ node_modules
 .psci
 output
 #json file
-package-lock.json
+#package-lock.json
 .gitignore
